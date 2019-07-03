@@ -4,40 +4,61 @@ import {
   color,
   flex,
   width,
+  borderRadius,
   display,
+  height,
+  flexBasis,
+  flexDirection,
+  flexWrap,
   maxWidth,
   border,
+  FlexBasisProps,
+  BorderRadiusProps,
+  FlexDirectionProps,
+  FlexWrapProps,
   MaxWidthProps,
   SpaceProps,
   ColorProps,
   FlexProps,
   WidthProps,
   BorderProps,
+  HeightProps,
   compose
 } from "styled-system"
 
 export type ButtonProps = SpaceProps &
   FlexProps &
+  HeightProps &
   ColorProps &
   WidthProps &
   MaxWidthProps &
-  BorderProps & { boxSizing?: string }
+  BorderProps &
+  FlexBasisProps &
+  FlexWrapProps &
+  BorderRadiusProps &
+  FlexDirectionProps & { boxSizing?: string }
 
-export const layout = compose(
+const layout = compose(
   space,
   display,
   width,
+  height,
   maxWidth,
-  color,
-  border
+  color
 )
 
-const Box = styled.div<ButtonProps>(
+const Box = styled("div")<ButtonProps>(
   {
     boxSizing: "border-box",
     minWidth: 0
   },
+  width,
   flex,
+  flexBasis,
+  flexDirection,
+  flexWrap,
+  border,
+  borderRadius,
   layout
 )
 
