@@ -1,33 +1,52 @@
 {
-    "name": "personal",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "next",
-        "build": "next build",
-        "start": "next start"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@testing-library/react": "^8.0.4",
-        "@zeit/next-typescript": "^1.1.1",
-        "jest": "^24.8.0",
-        "jest-dom": "^3.5.0",
-        "next": "^8.1.0",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "styled-components": "^4.3.2"
-    },
-    "devDependencies": {
-        "@types/jest": "^24.0.15",
-        "@types/next": "^8.0.5",
-        "@types/react": "^16.8.22",
-        "@types/react-dom": "^16.8.4",
-        "babel-plugin-styled-components": "^1.10.6",
-        "eslint": "^6.0.1",
-        "prettier": "^1.18.2"
-    }
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-typescript": "^1.1.1",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "styled-system": "^5.0.12"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^8.0.4",
+    "@types/jest": "^24.0.15",
+    "@types/next": "^8.0.5",
+    "@types/node": "^12.0.10",
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@types/styled-components": "^4.1.16",
+    "@types/styled-system": "^4.2.2",
+    "@typescript-eslint/eslint-plugin": "^1.10.2",
+    "@typescript-eslint/parser": "^1.10.2",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-typescript": "^4.0.0",
+    "eslint-config-prettier": "^5.0.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "jest": "^24.8.0",
+    "jest-dom": "^3.5.0",
+    "prettier": "^1.18.2"
+  }
 }

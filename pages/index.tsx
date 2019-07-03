@@ -1,3 +1,4 @@
-import * as React from 'react';
+import * as React from "react"
+import { Layout } from "../components"
 
-export default () => <h1>Hello Mars !!!</h1>;
+export default () => <Layout />
