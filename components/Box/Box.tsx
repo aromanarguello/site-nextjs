@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 import {
   space,
   color,
@@ -24,7 +24,7 @@ import {
   BorderProps,
   HeightProps,
   compose
-} from "styled-system"
+} from 'styled-system'
 
 export type ButtonProps = SpaceProps &
   FlexProps &
@@ -47,9 +47,9 @@ const layout = compose(
   color
 )
 
-const Box = styled("div")<ButtonProps>(
+const Box = styled('div')<ButtonProps>(
   {
-    boxSizing: "border-box",
+    boxSizing: 'border-box',
     minWidth: 0
   },
   width,
