@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Meta, Layout } from "../components"
-import { Theme } from "../styles/Themes"
+import * as React from 'react'
+import { Meta, Layout } from '../components'
+import { Theme } from '../styles/themes'
 
 export default () => (
   <Theme>
