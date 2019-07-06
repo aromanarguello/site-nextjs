@@ -1,57 +1,36 @@
 import * as React from 'react'
-import { Box, Avatar, Bio } from '../'
+import { Avatar, Bio } from '../'
+import {
+  StyledBox,
+  Text,
+  Icon,
+  Footer,
+  Body,
+  Separator,
+  Header,
+  HeaderText
+} from './Layout.styles'
+import {
+  faGithubSquare,
+  faMedium,
+  faLinkedin,
+  faTwitterSquare,
+  faDev
+} from '@fortawesome/free-brands-svg-icons'
 
-import styled from 'styled-components'
+const findMeData = [
+  { url: 'https://github.com/aromanarguello', icon: faGithubSquare },
+  { url: 'https://medium.com/@aromanarguello', icon: faMedium },
+  { url: 'https://www.linkedin.com/in/aromanarguello/', icon: faLinkedin },
+  { url: 'https://twitter.com/aromanarguello', icon: faTwitterSquare },
+  { url: 'https://dev.to/aromanarguello', icon: faDev }
+]
 
-const StyledBox = styled(Box)`
-  color: ${({
-    theme: {
-      colors: { blue }
-    }
-  }) => blue};
-  justify-content: center;
-`
-
-const Header = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  @media (max-width: ${({
-      theme: {
-        breakPoints: { mobileM }
-      }
-    }) => mobileM}) {
-    height: 400px;
-  }
-`
-
-const Body = styled.div`
-  height: 371px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 15px;
-  @media (min-width: 600px) {
-    height: 180px;
-  }
-`
-
-const HeaderText = styled.p`
-  font-size: ${({
-    theme: {
-      headings: { big }
-    }
-  }) => big[0]};
-`
-
-const Separator = styled.div`
-  margin: 0 auto;
-  width: 100%;
-  text-align: center;
-`
+/**
+ * opens link in new tab
+ * @param url
+ */
+const openNewTab = (url: string) => window.open(url, '_blank')
 
 const Layout: React.FC = () => {
   return (
@@ -68,12 +47,21 @@ const Layout: React.FC = () => {
         <Avatar imageName="avatar" />
         <HeaderText>Alejandro Roman</HeaderText>
       </Header>
-      <Separator>{`. . .`}</Separator>
+      <Separator>{`.   .   .`}</Separator>
       <Body>
         <Bio />
       </Body>
-      <Separator>{`. . .`}</Separator>
-      <footer>👞</footer>
+      <Separator>{`.   .   .`}</Separator>
+      <Footer padding="0 15px">
+        <Text>Find me at:</Text>
+        <StyledBox width={[350, 700, 1000]} flex="content">
+          {findMeData.map(({ url, icon }, index) => (
+            <a onClick={() => openNewTab(url)}>
+              <Icon icon={icon} pl={index === 0 ? 0 : '15px'} pr="15px" />
+            </a>
+          ))}
+        </StyledBox>
+      </Footer>
     </StyledBox>
   )
 }
