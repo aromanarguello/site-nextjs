@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
+    "export": "next build && next export",
     "test:watch": "npm test -- --watch"
   },
   "keywords": [],
