@@ -56,7 +56,7 @@ const Layout: React.FC = () => {
         <Text>Find me at:</Text>
         <StyledBox width={[350, 700, 1000]} flex="content">
           {findMeData.map(({ url, icon }, index) => (
-            <a onClick={() => openNewTab(url)}>
+            <a onClick={() => openNewTab(url)} key={index}>
               <Icon icon={icon} pl={index === 0 ? 0 : '15px'} pr="15px" />
             </a>
           ))}
