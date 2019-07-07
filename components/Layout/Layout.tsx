@@ -8,7 +8,9 @@ import {
   Body,
   Separator,
   Header,
-  HeaderText
+  HeaderText,
+  Link,
+  SubText
 } from './Layout.styles'
 import {
   faGithubSquare,
@@ -53,13 +55,23 @@ const Layout: React.FC = () => {
       </Body>
       <Separator>{`.   .   .`}</Separator>
       <Footer padding="0 15px">
-        <Text>Find me at:</Text>
-        <StyledBox width={[350, 700, 1000]} flex="content">
+        <Text margin="20px 0">Find me at:</Text>
+        <StyledBox width={[350, 700, 1000]} height="100px" flex="content">
           {findMeData.map(({ url, icon }, index) => (
             <a onClick={() => openNewTab(url)} key={index}>
               <Icon icon={icon} pl={index === 0 ? 0 : '15px'} pr="15px" />
             </a>
           ))}
+
+          <Text margin="20px 0 10px 0">Project we built at hackathon:</Text>
+
+          <Link
+            href={
+              'https://zealous-varahamihira-8ecd9a.netlify.com/?_sm_au_=isVJqSMJNnMnPWWj'
+            }
+          >
+            BitWorker<SubText>Built on: 01-20-19</SubText>
+          </Link>
         </StyledBox>
       </Footer>
     </StyledBox>

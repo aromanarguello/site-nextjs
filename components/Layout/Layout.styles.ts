@@ -3,6 +3,10 @@ import styled from 'styled-components'
 import { space, SpaceProps } from 'styled-system'
 import { Box } from '../'
 
+interface ITextProps extends SpaceProps {
+  textSize?: number
+}
+
 const StyledBox = styled(Box)`
   color: ${({
     theme: {
@@ -29,7 +33,7 @@ const Header = styled(Box)`
 `
 
 const Body = styled(Box)`
-  height: 450px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,7 +53,7 @@ const HeaderText = styled.p`
     theme: {
       headings: { big }
     }
-  }) => big[0]};
+  }) => big[1]};
 `
 
 const Separator = styled.div`
@@ -66,8 +70,25 @@ const Footer = styled(Box)`
   }) => small[1]};
 `
 
-const Text = styled.p`
-  margin: 28px 0;
+const Text = styled.p<ITextProps>`
+  margin: 0;
+  color: ${({
+    theme: {
+      colors: { blue }
+    }
+  }) => blue};
+  font-size: ${({
+    theme: {
+      headings: { small }
+    },
+    textSize
+  }) => small[typeof textSize === 'number' ? textSize : 1]};
+  width: 100%;
+  padding: 5px 0;
+  ${space}
+`
+const SubText = styled.p`
+  font-size: 12px;
 `
 
 const Icon = styled(FontAwesomeIcon)<SpaceProps>`
@@ -79,4 +100,19 @@ const Icon = styled(FontAwesomeIcon)<SpaceProps>`
   }) => big[0]};
   cursor: pointer;
 `
-export { StyledBox, Text, Icon, Footer, Body, Separator, Header, HeaderText }
+
+const Link = styled.a`
+  text-decoration: none;
+`
+export {
+  StyledBox,
+  Text,
+  Icon,
+  Footer,
+  Body,
+  Separator,
+  Header,
+  HeaderText,
+  Link,
+  SubText
+}
