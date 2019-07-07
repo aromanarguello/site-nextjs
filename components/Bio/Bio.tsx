@@ -27,7 +27,6 @@ const Bio: React.FC = () => {
         favorite technology, React. I am a huge proponent of best practices,
         testing and accessability.
       </Text>
-      <Text></Text>
       <Text>
         I am also supporing the creation of an open source project based out of
         Miami🌴!
