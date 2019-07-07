@@ -4,3 +4,6 @@ const typescript = require('@zeit/next-typescript')
 const images = require('next-images')
 
 module.exports = withPlugins([[typescript], [images]])
+module.exports = {
+  target: 'serverless'
+}
