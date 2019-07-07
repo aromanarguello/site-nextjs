@@ -33,7 +33,7 @@ const Header = styled(Box)`
 `
 
 const Body = styled(Box)`
-  height: 500px;
+  height: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@ const Body = styled(Box)`
         breakPoints: { tablet }
       }
     }) => tablet}) {
-    height: 200px;
+    height: 280px;
   }
 `
 
@@ -87,8 +87,10 @@ const Text = styled.p<ITextProps>`
   padding: 5px 0;
   ${space}
 `
-const SubText = styled.p`
-  font-size: 12px;
+const SubText = styled.p<ITextProps>`
+  width: 100%;
+  font-size: ${({ theme: { fontSizes }, textSize }) =>
+    fontSizes[Number(textSize)]};
 `
 
 const Icon = styled(FontAwesomeIcon)<SpaceProps>`
@@ -102,7 +104,17 @@ const Icon = styled(FontAwesomeIcon)<SpaceProps>`
 `
 
 const Link = styled.a`
+  ${space}
   text-decoration: none;
+  width: 100%;
+  &:visited,
+  :active {
+    color: ${({
+      theme: {
+        colors: { blue }
+      }
+    }) => blue};
+  }
 `
 export {
   StyledBox,

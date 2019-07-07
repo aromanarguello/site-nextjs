@@ -52,6 +52,13 @@ const Layout: React.FC = () => {
       <Separator>{`.   .   .`}</Separator>
       <Body>
         <Bio />
+        <Text pb="10px" textSize={0}>
+          Tech stack used: ReactJS, NextJS, Jest + Testing-lib,
+          Styled-Components, Styled-System, React-Spring
+        </Text>
+        <Link href="https://github.com/aromanarguello/site-nextjs">
+          <b>Source code</b>
+        </Link>
       </Body>
       <Separator>{`.   .   .`}</Separator>
       <Footer padding="0 15px">
@@ -62,16 +69,18 @@ const Layout: React.FC = () => {
               <Icon icon={icon} pl={index === 0 ? 0 : '15px'} pr="15px" />
             </a>
           ))}
-
-          <Text margin="20px 0 10px 0">Project we built at hackathon:</Text>
-
+          <Text margin="20px 0 10px 0">Project built at a hackathon:</Text>
           <Link
             href={
               'https://zealous-varahamihira-8ecd9a.netlify.com/?_sm_au_=isVJqSMJNnMnPWWj'
             }
           >
-            BitWorker<SubText>Built on: 01-20-19</SubText>
+            BitWorker
           </Link>
+          <SubText textSize={0}>Built on: 01-20-19</SubText>
+          <SubText textSize={0}>
+            Tech stack: ReactJS, Redux, JSS, Express
+          </SubText>
         </StyledBox>
       </Footer>
     </StyledBox>
