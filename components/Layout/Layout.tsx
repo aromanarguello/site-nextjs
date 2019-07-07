@@ -35,6 +35,10 @@ const findMeData = [
 const openNewTab = (url: string) => window.open(url, '_blank')
 
 const Layout: React.FC = () => {
+  React.useEffect(() => {
+    document.title = "Alejandro Roman's Personal Site"
+  }, [])
+
   return (
     <StyledBox
       width={[350, 700, 1000]}
