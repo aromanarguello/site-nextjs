@@ -14,7 +14,7 @@ const Text = styled.p`
     }
   }) => small[1]};
   width: 100%;
-  padding: 5px 0;
+  padding: 10px 0;
 `
 
 const Bio: React.FC = () => {
