@@ -12,7 +12,7 @@ export default () => (
       ></meta>
       <meta
         name="keywords"
-        content="ReactJS,React,Redux,Testing,HTML,CSS,XML,JavaScript"
+        content="ReactJS,React,NextJS,Redux,Testing,HTML,CSS,XML,JavaScript"
       ></meta>
       <meta name="author" content="Alejandro Roman"></meta>
     </Head>

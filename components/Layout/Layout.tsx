@@ -19,6 +19,7 @@ import {
   faTwitterSquare,
   faDev
 } from '@fortawesome/free-brands-svg-icons'
+import { useSpring, animated } from 'react-spring'
 
 const findMeData = [
   { url: 'https://github.com/aromanarguello', icon: faGithubSquare },
@@ -35,13 +36,26 @@ const findMeData = [
 const openNewTab = (url: string) => window.open(url, '_blank')
 
 const Layout: React.FC = () => {
+  const [isLoaded, setLoaded] = React.useState(false)
   React.useEffect(() => {
     document.title = "Alejandro Roman's Personal Site"
+    setLoaded(true)
   }, [])
+
+  const [props, set] = useSpring(() => ({
+    opacity: 0,
+    config: {
+      mass: 300,
+      tension: 450,
+      friction: 500
+    }
+  }))
+
+  set({ opacity: isLoaded ? 1 : 0 })
 
   return (
     <StyledBox
-      width={[350, 700, 1000]}
+      width={[375, 768, 1024]}
       height={1000}
       margin="0 auto"
       paddingTop={50}
@@ -49,44 +63,57 @@ const Layout: React.FC = () => {
       flex="content"
       flexDirection="column"
     >
-      <Header>
-        <Avatar imageName="avatar" />
-        <HeaderText>Alejandro Roman</HeaderText>
-      </Header>
-      <Separator>{`.   .   .`}</Separator>
-      <Body>
-        <Bio />
-        <Text pb="10px" textSize={0}>
-          Tech stack used: ReactJS, NextJS, Jest + Testing-lib,
-          Styled-Components, Styled-System, React-Spring
-        </Text>
-        <Link href="https://github.com/aromanarguello/site-nextjs">
-          <b>Source code</b>
-        </Link>
-      </Body>
-      <Separator>{`.   .   .`}</Separator>
-      <Footer padding="0 15px">
-        <Text margin="20px 0">Find me at:</Text>
-        <StyledBox width={[350, 700, 1000]} height="100px" flex="content">
-          {findMeData.map(({ url, icon }, index) => (
-            <a onClick={() => openNewTab(url)} key={index}>
-              <Icon icon={icon} pl={index === 0 ? 0 : '15px'} pr="15px" />
-            </a>
-          ))}
-          <Text margin="20px 0 10px 0">Project built at a hackathon:</Text>
+      <animated.div style={props}>
+        <Header>
+          <Avatar imageName="avatar" />
+          <HeaderText>Alejandro Roman</HeaderText>
+        </Header>
+        <Separator>{`.   .   .`}</Separator>
+        <Body padding="0">
+          <Bio />
+          <Text pb="10px" textSize={0}>
+            Tech stack used: ReactJS, NextJS, Jest + Testing-lib,
+            Styled-Components, Styled-System, React-Spring
+          </Text>
           <Link
-            href={
-              'https://zealous-varahamihira-8ecd9a.netlify.com/?_sm_au_=isVJqSMJNnMnPWWj'
-            }
+            center
+            pt="10px"
+            href="https://github.com/aromanarguello/site-nextjs"
           >
-            BitWorker
+            Source code
           </Link>
-          <SubText textSize={0}>Built on: 01-20-19</SubText>
-          <SubText textSize={0}>
-            Tech stack: ReactJS, Redux, JSS, Express
-          </SubText>
-        </StyledBox>
-      </Footer>
+        </Body>
+        <Separator mb="35px">{`.   .   .`}</Separator>
+        <Footer padding="0 15px">
+          <Text pb="10px">Find me at:</Text>
+          <StyledBox width={[375, 768, 1024]} height="300px" flex="content">
+            {findMeData.map(({ url, icon }, index) => (
+              <a onClick={() => openNewTab(url)} key={index}>
+                <Icon
+                  icon={icon}
+                  pl={index === 0 ? 0 : '15px'}
+                  pr="15px"
+                  pb="10px"
+                />
+              </a>
+            ))}
+            <Text pb="10px">Project built at a hackathon:</Text>
+            <Link
+              href={
+                'https://zealous-varahamihira-8ecd9a.netlify.com/?_sm_au_=isVJqSMJNnMnPWWj'
+              }
+            >
+              BitWorker
+            </Link>
+            <SubText margin="10px 0" textSize={0}>
+              Built on: 01-20-19
+            </SubText>
+            <SubText margin="10px 0" textSize={0}>
+              Tech stack: ReactJS, Redux, JSS, Express
+            </SubText>
+          </StyledBox>
+        </Footer>
+      </animated.div>
     </StyledBox>
   )
 }

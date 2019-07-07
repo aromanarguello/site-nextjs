@@ -5,8 +5,19 @@ import { Box } from '../'
 
 interface ITextProps extends SpaceProps {
   textSize?: number
+  /**
+   * Align text to the center of it's parent window
+   */
+  center?: boolean
+  /**
+   * Align text to the left/start of it's parent window
+   */
+  start?: boolean
+  /**
+   * Align text to the right/end of it's parent window
+   */
+  end?: boolean
 }
-
 const StyledBox = styled(Box)`
   color: ${({
     theme: {
@@ -33,7 +44,7 @@ const Header = styled(Box)`
 `
 
 const Body = styled(Box)`
-  height: 550px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -56,8 +67,8 @@ const HeaderText = styled.p`
   }) => big[1]};
 `
 
-const Separator = styled.div`
-  margin: 0 auto;
+const Separator = styled.div<SpaceProps>`
+  ${space}
   width: 100%;
   text-align: center;
 `
@@ -71,6 +82,7 @@ const Footer = styled(Box)`
 `
 
 const Text = styled.p<ITextProps>`
+  ${space}
   margin: 0;
   color: ${({
     theme: {
@@ -84,10 +96,9 @@ const Text = styled.p<ITextProps>`
     textSize
   }) => small[typeof textSize === 'number' ? textSize : 1]};
   width: 100%;
-  padding: 5px 0;
-  ${space}
 `
 const SubText = styled.p<ITextProps>`
+  ${space}
   width: 100%;
   font-size: ${({ theme: { fontSizes }, textSize }) =>
     fontSizes[Number(textSize)]};
@@ -103,7 +114,7 @@ const Icon = styled(FontAwesomeIcon)<SpaceProps>`
   cursor: pointer;
 `
 
-const Link = styled.a`
+const Link = styled.a<ITextProps>`
   ${space}
   text-decoration: none;
   width: 100%;
@@ -115,6 +126,9 @@ const Link = styled.a`
       }
     }) => blue};
   }
+  font-weight: 700;
+  text-align: ${({ center, start, end }) =>
+    (center && 'center') || (start && 'start') || (end && 'end')};
 `
 export {
   StyledBox,
