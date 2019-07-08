@@ -4,6 +4,7 @@ import Head from 'next/head'
 export default () => (
   <div>
     <Head>
+      <title>Alejandro Roman - Personal Site</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <meta
@@ -12,7 +13,6 @@ export default () => (
       ></meta>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-      <title>Alejandro Roman</title>
       <meta
         name="keywords"
         content="ReactJS,React,NextJS,Redux,Testing,HTML,CSS,XML,JavaScript"
