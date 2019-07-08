@@ -17,6 +17,18 @@ export default () => (
     ></meta>
     <meta name="author" content="Alejandro Roman"></meta>
 
+    <meta property="og:title" content="Alejandro Roman"></meta>
+    <meta property="og:type" content="website"></meta>
+    <meta
+      property="og:site_name"
+      content="I'm Alejandro Roman. I'm a software engineer based in Miami, FL."
+    ></meta>
+    <meta property="og:url" content="https://alejandroroman.io"></meta>
+    {/* <meta
+      property="og:image"
+      content="https://martindidiego.com/images/me.jpg"
+    ></meta> */}
+
     <style jsx global>
       {`
         body {
