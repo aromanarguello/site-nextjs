@@ -10,6 +10,9 @@ export default () => (
         name="description"
         content="Hey, my name is Alejandro Roman, I am software engineer based out of Miami, FL"
       ></meta>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+      <title>Alejandro Roman</title>
       <meta
         name="keywords"
         content="ReactJS,React,NextJS,Redux,Testing,HTML,CSS,XML,JavaScript"
