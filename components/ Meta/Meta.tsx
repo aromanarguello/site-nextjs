@@ -2,23 +2,21 @@ import * as React from 'react'
 import Head from 'next/head'
 
 export default () => (
-  <div>
-    <Head>
-      <title>Alejandro Roman - Personal Site</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
-      <meta
-        name="description"
-        content="Hey, my name is Alejandro Roman, I am software engineer based out of Miami, FL"
-      ></meta>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-      <meta
-        name="keywords"
-        content="ReactJS,React,NextJS,Redux,Testing,HTML,CSS,XML,JavaScript"
-      ></meta>
-      <meta name="author" content="Alejandro Roman"></meta>
-    </Head>
+  <Head>
+    <title>Alejandro Roman - Personal Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charSet="utf-8" />
+    <meta
+      name="description"
+      content="Hey, my name is Alejandro Roman, I am software engineer based out of Miami, FL"
+    ></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta
+      name="keywords"
+      content="ReactJS,React,NextJS,Redux,Testing,HTML,CSS,XML,JavaScript"
+    ></meta>
+    <meta name="author" content="Alejandro Roman"></meta>
+
     <style jsx global>
       {`
         body {
@@ -28,5 +26,5 @@ export default () => (
         }
       `}
     </style>
-  </div>
+  </Head>
 )
