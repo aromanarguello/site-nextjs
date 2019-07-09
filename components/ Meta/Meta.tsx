@@ -39,6 +39,7 @@ export default () => (
           background: #f9f7f7;
           font: 14px menlo;
           color: #112d4e;
+          margin: 0 auto;
         }
       `}
     </style>

@@ -71,6 +71,25 @@ const Layout: React.FC = () => {
         <Separator>{`.   .   .`}</Separator>
         <Body padding="0">
           <Bio />
+          <Text pb="15px">Blogs I've written:</Text>
+          <Link
+            pb="5px"
+            href="https://blog.usejournal.com/how-i-structure-my-react-apps-86e897054593"
+          >
+            How I structure my React Apps
+          </Link>
+          <Link
+            pb="5px"
+            href="https://dev.to/aromanarguello/getting-started-with-jest-react-testing-library-4nga"
+          >
+            Setting up Jest + React-Testing-Library
+          </Link>
+          <Link
+            pb="15px"
+            href="https://dev.to/aromanarguello/how-to-build-an-autocomplete-dropdown-in-react-using-downshift-1c3o"
+          >
+            Build a dropdown in React using Downshift
+          </Link>
           <Text pb="10px" textSize={0}>
             Tech stack used: ReactJS, NextJS, Jest + Testing-lib,
             Styled-Components, Styled-System, React-Spring
@@ -105,6 +124,7 @@ const Layout: React.FC = () => {
             >
               BitWorker
             </Link>
+            <SubText>(refresh to restart server)</SubText>
             <SubText margin="10px 0" textSize={0}>
               Built on: 01-20-19
             </SubText>

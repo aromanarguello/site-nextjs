@@ -52,10 +52,10 @@ const Body = styled(Box)`
   padding: 0 15px;
   @media (min-width: ${({
       theme: {
-        breakPoints: { tablet }
+        breakPoints: { mobileM }
       }
-    }) => tablet}) {
-    height: 280px;
+    }) => mobileM}) {
+    height: 500px;
   }
 `
 
