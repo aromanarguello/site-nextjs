@@ -34,7 +34,7 @@ const Header = styled(Box)`
   align-items: center;
   flex-direction: column;
 
-  @media (max-width: ${({
+  @media (min-width: ${({
       theme: {
         breakPoints: { mobileM }
       }

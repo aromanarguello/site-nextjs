@@ -4,18 +4,18 @@ import { Text } from '../Layout/Layout.styles'
 const Bio: React.FC = () => {
   return (
     <>
-      <Text pb="15px">
+      <Text pb="20px">
         I am a front-end engineer based in Miami, FL. I work for General
         Electric in the Digital Workplace Technology space and form part of an
         amazing team that helps build amazing components and tools using my
         favorite technology, React. I am a huge proponent of best practices,
         testing and accessability.
       </Text>
-      <Text pb="15px">
+      <Text pb="20px">
         I am also supporing the creation of an open source project based out of
         Miami🌴!
       </Text>
-      <Text pb="15px">
+      <Text pb="20px">
         My hobbies include writing awesome components, learning new technologies
         and then writting about them through blogpost
       </Text>
