@@ -55,7 +55,7 @@ const Body = styled(Box)`
         breakPoints: { tablet }
       }
     }) => tablet}) {
-    height: 340px;
+    height: 400px;
   }
 `
 
