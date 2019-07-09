@@ -79,6 +79,7 @@ const Footer = styled(Box)`
       headings: { small }
     }
   }) => small[1]};
+  height: 500px;
 `
 
 const Text = styled.p<ITextProps>`
