@@ -9,7 +9,7 @@ const Bio: React.FC = () => {
         Electric in the Digital Workplace Technology space and form part of an
         amazing team that helps build amazing components and tools using my
         favorite technology, React. I am a huge proponent of best practices,
-        testing and accessability.
+        testing and accessibility.
       </Text>
       <Text pb="20px">
         I am also supporing the creation of an open source project based out of
