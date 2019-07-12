@@ -12,7 +12,7 @@ const Bio: React.FC = () => {
         testing and accessibility.
       </Text>
       <Text pb="20px">
-        I am also supporing the creation of an open source project based out of
+        I am also supporting the creation of an open source project based out of
         Miami🌴!
       </Text>
       <Text pb="20px">
