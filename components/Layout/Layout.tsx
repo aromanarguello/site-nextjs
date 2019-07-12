@@ -93,16 +93,6 @@ const Layout: React.FC = () => {
                 />
               </a>
             ))}
-            <Text pb="10px">Project built at a hackathon:</Text>
-            <Link href={'https://zealous-varahamihira-8ecd9a.netlify.com'}>
-              BitWorker
-            </Link>
-            <SubText margin="10px 0" textSize={0}>
-              Built on: 01-20-19
-            </SubText>
-            <SubText margin="10px 0" textSize={0}>
-              Tech stack: ReactJS, Redux, JSS, Express
-            </SubText>
           </StyledBox>
         </Footer>
       </animated.div>
