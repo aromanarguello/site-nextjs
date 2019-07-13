@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Text } from '../Layout/Layout.styles'
+import { Text, Link } from '../Layout/Layout.styles'
 
 const Bio: React.FC = () => {
   return (
@@ -11,10 +11,17 @@ const Bio: React.FC = () => {
         favorite technology, React. I am a huge proponent of best practices,
         testing and accessibility.
       </Text>
-      <Text pb="20px">
+      <Text>
         I am also supporting the creation of an open source project based out of
         Miami🌴!
       </Text>
+      <Text pb="20px">
+        Check it out:{' '}
+        <Link href="https://github.com/open-source-miami/component-library">
+          Open Source Miami
+        </Link>{' '}
+      </Text>
+
       <Text pb="20px">
         My hobbies include writing awesome components, learning new technologies
         and then writting about them through blogpost
