@@ -27,7 +27,7 @@ const StyledBox = styled(Box)`
   justify-content: center;
 `
 
-const Header = styled(Box)`
+const Header = styled.header`
   display: flex;
   width: 100%;
   justify-content: center;
@@ -43,7 +43,7 @@ const Header = styled(Box)`
   }
 `
 
-const Body = styled(Box)`
+const Body = styled.main`
   height: 600px;
   display: flex;
   justify-content: center;
@@ -59,12 +59,16 @@ const Body = styled(Box)`
   }
 `
 
-const HeaderText = styled.p`
+const HeaderText = styled.h1`
   font-size: ${({
     theme: {
       headings: { big }
     }
   }) => big[1]};
+`
+
+const HeaderTwo = styled.h2<SpaceProps>`
+  ${space}
 `
 
 const Separator = styled.div<SpaceProps>`
@@ -73,7 +77,8 @@ const Separator = styled.div<SpaceProps>`
   text-align: center;
 `
 
-const Footer = styled(Box)`
+const Footer = styled.footer<SpaceProps>`
+ ${space}
   font-size: ${({
     theme: {
       headings: { small }
@@ -97,12 +102,6 @@ const Text = styled.p<ITextProps>`
     textSize
   }) => small[typeof textSize === 'number' ? textSize : 1]};
   width: 100%;
-`
-const SubText = styled.p<ITextProps>`
-  ${space}
-  width: 100%;
-  font-size: ${({ theme: { fontSizes }, textSize }) =>
-    fontSizes[Number(textSize)]};
 `
 
 const Icon = styled(FontAwesomeIcon)<SpaceProps>`
@@ -141,5 +140,5 @@ export {
   Header,
   HeaderText,
   Link,
-  SubText
+  HeaderTwo
 }

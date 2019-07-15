@@ -2,15 +2,14 @@ import * as React from 'react'
 import { Avatar, Bio } from '../'
 import {
   StyledBox,
-  Text,
   Icon,
   Footer,
   Body,
   Separator,
   Header,
   HeaderText,
-  Link,
-  SubText
+  HeaderTwo,
+  Link
 } from './Layout.styles'
 import {
   faGithubSquare,
@@ -65,11 +64,11 @@ const Layout: React.FC = () => {
     >
       <animated.div style={props}>
         <Header>
-          <Avatar imageName="avatar" />
+          <Avatar />
           <HeaderText>Alejandro Roman</HeaderText>
         </Header>
         <Separator>{`.   .   .`}</Separator>
-        <Body padding="0">
+        <Body title="body">
           <Bio />
           <Link
             center
@@ -81,7 +80,7 @@ const Layout: React.FC = () => {
         </Body>
         <Separator mb="35px">{`.   .   .`}</Separator>
         <Footer padding="0 15px">
-          <Text pb="10px">Find me at:</Text>
+          <HeaderTwo pb="10px">Find me at:</HeaderTwo>
           <StyledBox width={[375, 768, 1024]} height="300px" flex="content">
             {findMeData.map(({ url, icon }, index) => (
               <a onClick={() => openNewTab(url)} key={index}>

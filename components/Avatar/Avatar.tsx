@@ -1,10 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-interface IAvatarProps {
-  imageName: string
-}
-
 const Image = styled.img`
   width: 250px;
   height: 280px;
@@ -15,10 +11,10 @@ const Image = styled.img`
   }) => `1px solid ${navy}`};
 `
 
-const Avatar: React.FC<IAvatarProps> = ({ imageName }) => {
+const Avatar: React.FC = () => {
   return (
     <Image
-      src={require(`../../assets/images/${imageName}.jpeg`)}
+      src="https://res.cloudinary.com/dzeqyvxo2/image/upload/c_scale,h_1124,q_42/v1562175024/headshot_mfr0uy.jpg"
       alt="avatar"
     />
   )
