@@ -9,7 +9,8 @@ import {
   Header,
   HeaderText,
   HeaderTwo,
-  Link
+  Link,
+  Section
 } from './Layout.styles'
 import {
   faGithubSquare,
@@ -67,32 +68,38 @@ const Layout: React.FC = () => {
           <Avatar />
           <HeaderText>Alejandro Roman</HeaderText>
         </Header>
-        <Separator>{`.   .   .`}</Separator>
+        <Separator aria-hidden={true}>{`.   .   .`}</Separator>
         <Body title="body">
-          <Bio />
-          <Link
-            center
-            pt="10px"
-            href="https://github.com/aromanarguello/site-nextjs"
-          >
-            Source code
-          </Link>
+          <Section>
+            <Bio />
+          </Section>
+          <Section>
+            <Link
+              center
+              pt="10px"
+              href="https://github.com/aromanarguello/site-nextjs"
+            >
+              Source code
+            </Link>
+          </Section>
         </Body>
-        <Separator mb="35px">{`.   .   .`}</Separator>
+        <Separator aria-hidden={true} mb="35px">{`.   .   .`}</Separator>
         <Footer padding="0 15px">
-          <HeaderTwo pb="10px">Find me at:</HeaderTwo>
-          <StyledBox width={[375, 768, 1024]} height="300px" flex="content">
-            {findMeData.map(({ url, icon }, index) => (
-              <a onClick={() => openNewTab(url)} key={index}>
-                <Icon
-                  icon={icon}
-                  pl={index === 0 ? 0 : '15px'}
-                  pr="15px"
-                  pb="10px"
-                />
-              </a>
-            ))}
-          </StyledBox>
+          <Section>
+            <HeaderTwo pb="10px">Find me at:</HeaderTwo>
+            <StyledBox width={[375, 768, 1024]} height="300px" flex="content">
+              {findMeData.map(({ url, icon }, index) => (
+                <a onClick={() => openNewTab(url)} key={index}>
+                  <Icon
+                    icon={icon}
+                    pl={index === 0 ? 0 : '15px'}
+                    pr="15px"
+                    pb="10px"
+                  />
+                </a>
+              ))}
+            </StyledBox>
+          </Section>
         </Footer>
       </animated.div>
     </StyledBox>

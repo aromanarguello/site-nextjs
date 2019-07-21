@@ -129,7 +129,9 @@ const Link = styled.a<ITextProps>`
   font-weight: 700;
   text-align: ${({ center, start, end }) =>
     (center && 'center') || (start && 'start') || (end && 'end')};
+  margin: 0 auto;
 `
+const Section = styled.section``
 export {
   StyledBox,
   Text,
@@ -140,5 +142,6 @@ export {
   Header,
   HeaderText,
   Link,
-  HeaderTwo
+  HeaderTwo,
+  Section
 }

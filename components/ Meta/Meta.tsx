@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Head from 'next/head'
 export default () => (
-  <div>
+  <html lang="en">
     <Head>
       <title>Alejandro Roman - Personal Site</title>
       <meta
@@ -42,5 +42,5 @@ export default () => (
         }
       `}
     </style>
-  </div>
+  </html>
 )
