@@ -1,11 +1,11 @@
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import withGA from 'next-ga'
 
-export default class MyDocument extends Document {
+class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
-
     try {
       ctx.renderPage = () =>
         originalRenderPage({
@@ -27,3 +27,5 @@ export default class MyDocument extends Document {
     }
   }
 }
+
+export default withGA(process.env.GA_TRACKING_ID)(MyDocument)
