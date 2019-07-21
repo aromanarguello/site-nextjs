@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Image = styled.img`
   width: 250px;
-  height: 280px;
+  height: 300px;
   border: ${({
     theme: {
       colors: { navy }
