@@ -6,10 +6,10 @@ const Bio: React.FC = () => {
     <>
       <Text pb="20px">
         I am a front-end engineer based in Miami, FL. I work for General
-        Electric in the Digital Workplace Technology space and form part of an
-        amazing team that helps build amazing components and tools using my
-        favorite technology, React. I am a huge proponent of best practices,
-        testing and accessibility.
+        Electric in the Digital Workplace Technology space and form part of a
+        team that helps build amazing components and tools using my favorite
+        technology, React. I am a huge proponent of best practices, testing and
+        accessibility.
       </Text>
       <Text>
         I am also supporting the creation of an open source project based out of
@@ -23,8 +23,8 @@ const Bio: React.FC = () => {
       </Text>
 
       <Text pb="20px">
-        My hobbies include writing awesome components, learning new technologies
-        and then writting about them through blogpost
+        My hobbies include writing components from scratch, learning new
+        technologies and then writting about them through blogpost
       </Text>
     </>
   )
