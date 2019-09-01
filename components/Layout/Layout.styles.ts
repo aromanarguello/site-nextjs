@@ -25,6 +25,7 @@ const StyledBox = styled(Box)`
     }
   }) => blue};
   justify-content: center;
+  overflow: hidden;
 `
 
 const Header = styled.header`
@@ -33,7 +34,6 @@ const Header = styled.header`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   @media (min-width: ${({
       theme: {
         breakPoints: { mobileM }
@@ -44,18 +44,19 @@ const Header = styled.header`
 `
 
 const Body = styled.main`
-  height: 600px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0 15px;
+  text-align: center;
   @media (min-width: ${({
       theme: {
         breakPoints: { tablet }
       }
     }) => tablet}) {
-    height: 400px;
+    height: 200px;
   }
 `
 
@@ -85,6 +86,7 @@ const Footer = styled.footer<SpaceProps>`
     }
   }) => small[1]};
   height: 500px;
+  text-align: center;
 `
 
 const Text = styled.p<ITextProps>`
