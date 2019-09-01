@@ -33,7 +33,7 @@ const Header = styled.header`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  overflow: none;
   @media (min-width: ${({
       theme: {
         breakPoints: { mobileM }
@@ -44,9 +44,10 @@ const Header = styled.header`
 `
 
 const Body = styled.main`
-  height: 600px;
+  height: 300px;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   padding: 0 15px;
@@ -55,7 +56,7 @@ const Body = styled.main`
         breakPoints: { tablet }
       }
     }) => tablet}) {
-    height: 400px;
+    height: 200px;
   }
 `
 
@@ -79,6 +80,7 @@ const Separator = styled.div<SpaceProps>`
 
 const Footer = styled.footer<SpaceProps>`
  ${space}
+ text-align: center;
   font-size: ${({
     theme: {
       headings: { small }
