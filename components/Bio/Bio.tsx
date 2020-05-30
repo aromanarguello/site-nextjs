@@ -9,7 +9,7 @@ const Bio: React.FC = () => {
       </Text>
       <Text pb="20px">
         My hobbies include writing awesome components, learning new technologies
-        and then writting about them through blogpost
+        and then writing about them through blogpost
       </Text>
     </>
   )
